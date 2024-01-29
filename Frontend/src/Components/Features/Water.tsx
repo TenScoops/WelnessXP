@@ -1,5 +1,5 @@
 const Water = () =>{
-    return(<div className="w-[300px] h-5/6 border border-black">
+    return(<div className="hidden md:block w-7/12 h-[512px] mb-3 border shadow-sharp-md mr-12">
         
     </div>)
 }
