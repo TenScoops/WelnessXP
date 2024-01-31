@@ -1,6 +1,8 @@
 const Water = () =>{
-    return(<div className="hidden md:block w-7/12 h-[512px] mb-3 border shadow-sharp-md mr-12">
-        
+    return(<div className="w-full flex justify-center" >
+        <div className="hidden md:block w-10/12 h-[600px] mt-4 border shadow-sharp-md icon-hover cursor-pointer">
+
+        </div>
     </div>)
 }
 
