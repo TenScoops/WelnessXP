@@ -11,11 +11,11 @@ export default {
       },
       boxShadow: {
         'sharp-xl':[
-          '0 0 0 1px rgba(0, 0, 0, 1)', // Black border
+          '0 0 0 2px rgba(0, 0, 0, 1)', // Black border
           '11px 11px 0 0 rgba(57, 57, 57, 1)' // Existing shadow
         ],
         'sharp-lg':[
-          '0 0 0 1px rgba(0, 0, 0, 1)', // Black border
+          '0 0 0 2px rgba(0, 0, 0, 1)', // Black border
           '9px 9px 0 0 rgba(57, 57, 57, 1)' // Existing shadow
         ],
         'sharp-md':[

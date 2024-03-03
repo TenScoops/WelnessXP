@@ -2,37 +2,27 @@ import { Heart2, Settings, RedirectIcon } from "../Icons/Icons"
 
 const Navbar = () => {
     return(
-    <div className=" w-full fixed bg-slate-50 z-50">
-       <div className=" flex flex-row justify-between items-center">
-            <div className="ml-5">
-                <h3>Life XP</h3>
-                <div className="flex flex-row items-center">
-                    <h3 className="text-xs underline mr-1">
-                        Wellness
-                    </h3>
-                    <Heart2 />
-                </div>
+    <div className="flex items-center w-full  bg-white z-50 border-b-2 border-black h-14">
+       <div className=" flex flex-row w-full justify-between items-center">
+            <div className="ml-5 cursor-default">
+                <h3>Daily XP</h3>
+                
             </div>
             <div className="flex flex-row space-x-14 text-sm">
-                <h3 className="cursor-pointer">About</h3>
-                <h3 className="cursor-pointer">Features</h3>
-                <div className="flex items-center space-x-1">
-                    <h3 className="cursor-pointer">
+                <h3 className="cursor-pointer icon-hover2">About</h3>
+                <h3 className="cursor-pointer icon-hover2">Features</h3>
+                <div className="flex items-center space-x-1 icon-hover2 cursor-pointer">
+                    <h3 className="">
                         LifeXP
                     </h3>
                     <RedirectIcon />
                 </div>
             </div>
-            <button className="mr-5 text-sm">
+            <button className="mr-5 text-sm icon-hover2">
                 Logout
             </button>
         </div>
-        {/* styling for navbar - bottom border*/}
-        <div className="flex justify-center">
-            <div className="border border-b border-black w-[50%]">
-
-            </div>
-        </div>
+       
     </div>)
 }
 
