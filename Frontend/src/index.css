@@ -14,3 +14,21 @@
     transition: box-shadow 0.4s ease;
   }
   
+
+     /* For WebKit (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 5px; 
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #565656;  
+    border-radius: 10px;
+    border: 1.5px solid black;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #4b4b4b; 
+    border-radius: 10px;
+    border: 1.5px solid black;
+  }
+  
