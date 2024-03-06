@@ -2,7 +2,7 @@ import { Heart2, Settings, RedirectIcon } from "../Icons/Icons"
 
 const Navbar = () => {
     return(
-    <div className="flex items-center w-full  bg-white z-50 border-b-2 border-black h-14">
+    <div className="flex items-center w-full  bg-white z-50 border-b border-black h-14">
        <div className=" flex flex-row w-full justify-between items-center">
             <div className="ml-5 cursor-default">
                 <h3>Daily XP</h3>
