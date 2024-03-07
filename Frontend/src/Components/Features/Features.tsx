@@ -1,11 +1,31 @@
-import { Heart, SleepIcon, CheckMark, ExerciseIcon, WaterIcon, Complete, CheckComplete } from "../Icons/Icons"
+import { Heart, SleepIcon, CheckMark, ExerciseIcon, WaterIcon, MeditateIcon, CheckComplete } from "../Icons/Icons"
 import { RiMentalHealthFill } from "react-icons/ri";
+import FeatureCard from "./FeatureCard";
 
 
 const Features = () => {
     const styling = {
         "featurediv": "flex flex-col items-center mb-8",
         "boxdiv": "flex items-center justify-center w-10/12 md:w-10/12 h-24 shadow-sharp-lg hover:shadow-sharp-xl shadow-transition icon-hover cursor-pointer "
+    }
+
+    const feature = {
+        "Sleep":{
+            icon:<SleepIcon />,
+            buttonIcon:<CheckComplete />
+        }, 
+        "Exercise":{
+            icon:<ExerciseIcon />,
+            buttonIcon:<CheckComplete />
+        },
+        "Water":{
+            icon:<WaterIcon />,
+            buttonIcon:<CheckComplete />
+        },
+        "Meditation": {
+            icon:<MeditateIcon />,
+            buttonIcon: <CheckComplete />
+        }
     }
     return(
     <div className="flex flex-col w-full items-center  border-t border-black mt-6">
@@ -26,105 +46,15 @@ const Features = () => {
             {/* Features cliclable divs */}
             <div className="grid md:grid-cols-2  ">
             
-
-                {/* sleep */}
-                <div className={styling.featurediv}>
-                    <div className="flex flex-row justify-between w-10/12 mb-2">
-                        <div className="flex flex-row">
-                            <h1 className="mr-2">Sleep</h1> 
-                            <SleepIcon />
-                        </div>
-                        <div className="icon-hover2 cursor-pointer ">
-                            <CheckComplete />
-                        </div>
-                    </div>
-               
-                    <div className={styling.boxdiv}>
-                        <h1 className=""> 2 hrs below target</h1>
-                    </div>
-                </div>
-
-                {/* Exercise */}
-                <div className={styling.featurediv}>
-                    <div className="flex flex-row justify-between w-10/12 mb-2">
-                        <div className="flex flex-row items-center">
-                            <h1 className="mr-2">Exercise</h1> 
-                            <ExerciseIcon />
-                        </div>
-                        <div className="icon-hover2 cursor-pointer">
-                            <CheckComplete />
-                        </div>
-                    </div>
-               
-                    <div className={styling.boxdiv}>
-                        <h1>You haven't exercised today</h1>
-                    </div>
-                </div>
-                {/* Meditation */}
-                <div className={styling.featurediv}>
-                   
-                    <div className="flex flex-row items-center">
-                        <h1 className="mr-2">Meditation</h1> 
-                        <RiMentalHealthFill size={25}/>
-                    </div>
-                   
-                   
-                    <div className={styling.boxdiv}>
-                        <Complete />
-                        <h1>Complete!</h1>
-                    </div>
-                </div>
-
-                {/* Water */}
-                <div className={styling.featurediv}>
-                  
-                <div className="flex flex-row justify-between w-10/12 mb-2">
-                        <div className="flex flex-row items-center">
-                            <h1 className="mr-2">Exercise</h1> 
-                            <ExerciseIcon />
-                        </div>
-                        <div className="icon-hover2 cursor-pointer">
-                            <CheckComplete />
-                        </div>
-                    </div>
-               
-                    <div className={styling.boxdiv}>
-                        <h1>You haven't exercised today</h1>
-                    </div>
-                </div>
-                {/* Water */}
-                <div className={styling.featurediv}>
-                <div className="flex flex-row justify-between w-10/12 mb-2">
-                        <div className="flex flex-row items-center">
-                            <h1 className="mr-2">Exercise</h1> 
-                            <ExerciseIcon />
-                        </div>
-                        <div className="icon-hover2 cursor-pointer">
-                            <CheckComplete />
-                        </div>
-                    </div>
-               
-                    <div className={styling.boxdiv}>
-                        <h1>You haven't exercised today</h1>
-                    </div>
-                </div>
-                {/* Water */}
-                <div className={styling.featurediv}>
-                  
-                <div className="flex flex-row justify-between w-10/12 mb-2">
-                        <div className="flex flex-row items-center">
-                            <h1 className="mr-2">Exercise</h1> 
-                            <ExerciseIcon />
-                        </div>
-                        <div className="icon-hover2 cursor-pointer">
-                            <CheckComplete />
-                        </div>
-                    </div>
-               
-                    <div className={styling.boxdiv}>
-                        <h1>You haven't exercised today</h1>
-                    </div>
-                </div>
+                {Object.entries(feature).map(([title,{icon, buttonIcon}])=>(
+                    <FeatureCard 
+                        key={title}
+                        title = {title} 
+                        icon = {icon} 
+                        buttonIcon={buttonIcon} 
+                        />
+                ))}
+                
 
         </div>
        
