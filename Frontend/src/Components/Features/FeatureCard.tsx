@@ -3,29 +3,33 @@ import { Complete } from "../Icons/Icons"
 
 const FeatureCard = ({title, icon, buttonIcon}) => {
     const [complete, setComplete] = useState<boolean>(false)
-    const styling = {
-        "featurediv": "flex flex-col items-center mb-8",
-        "boxdiv": "flex items-center justify-center w-10/12 md:w-10/12 h-24 shadow-sharp-lg hover:shadow-sharp-xl shadow-transition icon-hover cursor-pointer "
-    }
 
-    return (<div className={styling.featurediv}>
-        <div className="flex flex-row justify-between w-10/12 mb-2">
-            <div className="flex flex-row items-center">
-                <h1 className="mr-2">{title}</h1> 
-                {icon}
-            </div>
-            <button 
-                onClick={()=>setComplete(!complete)}
-                className="icon-hover2 cursor-pointer ">
-                {buttonIcon}
-            </button>
-        </div>
+
+    return (<div className="flex flex-col items-center mb-8">
+       
    
-        <div className={styling.boxdiv}>
-            {complete?<h1 className="flex flex-row items-center mr-6">
+        <div className="flex justify-center rounded-lg w-9/12 md:w-9/12 h-[450px] shadow-sharp-lg 
+                        over:shadow-sharp-xl shadow-transition icon-hover cursor-pointer ">
+            {complete?<h1 className="flex flex-row mr-6">
                         <span><Complete/></span>Complete
                         </h1>:
-                        <h1 className=""> 2 hrs below target</h1>}
+                         <div className="flex flex-col items-center w-9/12 space-y-20">
+                            {/* title of card */}
+                            <div className="flex items-center mt-10">
+                                <h1 className="mr-2">{title}</h1> 
+                                {icon}
+                            </div>
+                            {/* Description */}
+                            <h1 className=""> 2 hrs below target</h1>
+
+                            {/* button */}
+                            <button 
+                                onClick={()=>setComplete(!complete)}
+                                className="icon-hover3 cursor-pointer bg-black h-8 text-white px-6 rounded-md">
+                                Complete
+                            </button>
+
+                     </div>}
         </div>
     </div>)
 }

@@ -16,7 +16,7 @@ export default {
         ],
         'sharp-lg':[
           '0 0 0 2px rgba(0, 0, 0, 1)', // Black border
-          '9px 9px 0 0 rgba(57, 57, 57, 1)' // Existing shadow
+          '5px 5px 0 0 rgba(57, 57, 57, 1)' // Existing shadow
         ],
         'sharp-md':[
           '0 0 0 2px rgba(0, 0, 0, 1)', // Black border
